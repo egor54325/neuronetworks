@@ -157,7 +157,7 @@ a:visited:hover {
     transition: 0.1s linear;
 }
 
-.footer {
+footer {
     background: linear-gradient(90deg, #06004d, #000000);
     color: #7579ea;
     text-align: center;
