@@ -208,4 +208,11 @@ a:visited:hover {
 
 .output.code {
     white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 14px;
+    background: #282c34;
+    color: #61dafb;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-block;
 }
