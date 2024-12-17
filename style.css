@@ -230,7 +230,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: row;
-    width: 200px;
+    width: auto;
     height: 200px;
     background-color: #fff;
     color: #000;
@@ -250,11 +250,12 @@ footer {
     height: auto;
     margin-right: 20px;
     border: none;
+    box-shadow: none;
 }
 
 .nav-block > img:hover {
     transition: 0s;
-    transform: scale(0);
+    transform: scale(1);
 }
 
 .nav-block > p {
