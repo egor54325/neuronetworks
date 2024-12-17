@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-to-code</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+</head>
+<body>
+    <article>
+        <h2>Нейросети для помощи в програмировании <img class="icon" src="images/Code a9b3ff.svg" alt="Code"></h2>
+                <ol>
+                    <li>ZZZ code AI (на <a href="https://zzzcode.ai/">zzzcode.ai</a>)</li>
+                    <p>
+                        Промт: змейка с ускорением
+                        <br>Language / Software: Python
+                        <br>I want: Generate code
+                        <br>Tone: Helpful
+                        <br>Output in: Русский
+                    </p>
+                    <p class="output code">
+import pygame
+import time
+import random
+
+# Инициализация Pygame
+pygame.init()
+
+# Цвета
+black = (0, 0, 0)
+white = (255, 255, 255)
+red = (213, 50, 80)
+green = (0, 255, 0)
+blue = (50, 153, 213)
+
+# Размеры окна
+width = 600
+height = 400
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption('Змейка с ускорением')
+
+# Настройки змейки
+snake_block = 10
+snake_speed = 15
+
+# Шрифт
+font_style = pygame.font.SysFont("bahnschrift", 25)
+score_font = pygame.font.SysFont("comicsansms", 35)
+
+def our_snake(snake_block, snake_list):
+    for x in snake_list:
+        pygame.draw.rect(screen, black, [x[0], x[1], snake_block, snake_block])
+
+def message(msg, color):
+    mesg = font_style.render(msg, True, color)
+    screen.blit(mesg, [width / 6, height / 3])
+
+def gameLoop():
+    game_over = False
+    game_close = False
+
+    x1 = width / 2
+    y1 = height / 2
+
+    x1_change = 0
+    y1_change = 0
+
+    snake_List = []
+    Length_of_snake = 1
+
+    foodx = round(random.randrange(0, width - snake_block) / 10.0) * 10.0
+    foody = round(random.randrange(0, height - snake_block) / 10.0) * 10.0
+
+    global snake_speed
+
+    while not game_over:
+
+        while game_close == True:
+            screen.fill(blue)
+            message("Вы проиграли! Нажмите C для продолжения или Q для выхода", red)
+            pygame.display.update()
+
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_q:
+                        game_over = True
+                        game_close = False
+                    if event.key == pygame.K_c:
+                        gameLoop()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                game_over = True
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    x1_change = -snake_block
+                    y1_change = 0
+                elif event.key == pygame.K_RIGHT:
+                    x1_change = snake_block
+                    y1_change = 0
+                elif event.key == pygame.K_UP:
+                    y1_change = -snake_block
+                    x1_change = 0
+                elif event.key == pygame.K_DOWN:
+                    y1_change = snake_block
+                    x1_change = 0
+
+        if x1 >= width or x1 < 0 or y1 >= height or y1 < 0:
+            game_close = True
+
+        x1 += x1_change
+        y1 += y1_change
+        screen.fill(blue)
+        pygame.draw.rect(screen, green, [foodx, foody, snake_block, snake_block])
+        snake_Head = []
+        snake_Head.append(x1)
+        snake_Head.append(y1)
+        snake_List.append(snake_Head)
+        if len(snake_List) > Length_of_snake:
+            del snake_List[0]
+
+        for x in snake_List[:-1]:
+            if x == snake_Head:
+                game_close = True
+
+        our_snake(snake_block, snake_List)
+
+        pygame.display.update()
+
+        if x1 == foodx and y1 == foody:
+            foodx = round(random.randrange(0, width - snake_block) / 10.0) * 10.0
+            foody = round(random.randrange(0, height - snake_block) / 10.0) * 10.0
+            Length_of_snake += 1
+            snake_speed += 1
+
+        time.sleep(0.1)
+
+    pygame.quit()
+    quit()
+
+gameLoop()
+                    </p>
+                </ol>
+    </article>
+</body>
+</html>

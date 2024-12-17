@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-to-video</title>
+    <link rel="stylesheet" href="..\style.css">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+</head>
+<body>
+    <article>
+        <h2>Нейросети для генерации видео <img src="images/Play Arrow a9b3ff.svg" alt="Play Arrow" class="icon"></h2>
+        <p>Промт: Синий цветок колышется на сильном ветру
+            Prompt: A blue flower sways in a strong wind
+            <br>Фото (Сгенерировано Stable Diffusion):
+        </p>
+        <img src="images/Gemini.png" alt="Синий цветок колышется на сильном ветру">
+    <ol>
+        <li>Luma (на <a target="_blank" href="https://lumalabs.ai/dream-machine/creations">lumalabs.ai/dream-machine/creations</a>) (не работает в России)</li>
+        <p>С фото</p>
+        <video width="240" height="240" controls>
+            <source src="videos/Luma.mp4">
+            <track label="invideo AI" kind="A blue flower sways in a strong wind" srclang="eng" src="videos/invideo AI.mp4" default>
+        </video>
+        <li>Fusion Brain (на <a target="_blank" href="https://fusionbrain.ai/">fusionbrain.ai</a>)</li>
+        <p>Без фото</p>
+        <video width="240" height="240" controls>
+            <source src="videos/Fusion Brain.mp4">
+            <track label="Fusion brain" kind="Синий цветок колышется на сильном ветру" srclang="ru" src="videos/Fusion Brain.mp4" default>
+        </video>
+        <li>invideo AI (на примере используется версия invideo AI v3.0) (на <a target="_blank" href="https://ai.invideo.io/workspace/">ai.invideo.io/workspace)</a></li>
+        <p>
+            Без фото
+            <br>Visual style: Realistic
+            <br>Duration: 1.0 Minutes
+            <br>Platform: Youtube
+            <br>Type of watermark: Stock Watermarks
+            <br>Invideo AI branding: Normal
+            <br>Download resolution: 1080p
+        </p>
+        <video width="500" controls>
+            <source src="videos/invideo AI.mp4">
+            <track label="invideo AI" kind="A blue flower sways in a strong wind" srclang="eng" src="videos/invideo AI.mp4" default>
+        </video>
+    </ol>
+    </article>
+</body>
+</html>
