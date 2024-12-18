@@ -260,5 +260,6 @@ footer {
 
 .nav-block > p {
     flex-grow: 1;
+    font-size: 2em;
     background-color: rgb(0, 0, 0, 0);
 }
