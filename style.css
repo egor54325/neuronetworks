@@ -49,7 +49,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em; /* Увеличен размер шрифта */
 }
 
 h2 {
@@ -57,7 +57,7 @@ h2 {
     color: #a9b3ff;
     padding: 15px;
     border-radius: 8px;
-    font-size: 2em;
+    font-size: 2.5em; /* Увеличен размер шрифта */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -91,7 +91,7 @@ article:hover {
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px; /* Увеличен размер шрифта */
     background: rgba(148, 200, 255, 0.1);
     padding: 10px;
     border-radius: 5px;
@@ -103,7 +103,7 @@ p:hover {
 }
 
 ol {
-    font-size: 20px;
+    font-size: 22px; /* Увеличен размер шрифта */
     margin-left: 20px;
 }
 
@@ -122,12 +122,12 @@ ol {
 }
 
 img, video {
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0;
     border: 2px double #000;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    max-width: 200px;
-    height: auto;
-    margin: 10px 0;
 }
 img:hover, video:hover {
     transform: scale(2);
@@ -142,7 +142,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #ffffff;
     transition: 0.1s linear;
 }
@@ -153,7 +153,7 @@ a:visited {
 
 a:visited:hover {
     color: #b790c0;
-    text-decoration: underline;
+    text-decoration: none;
     transition: 0.1s linear;
 }
 
@@ -191,6 +191,23 @@ footer {
     h1 {
         font-size: 2em;
     }
+    .nav-block {
+        flex-direction: column;
+        height: auto;
+    }
+    .nav-block > img {
+        max-width: 100%; /* Изображения занимают всю ширину блока */
+        margin: 0 auto 10px auto;
+    }
+    .nav-block > p {
+        font-size: 1.5em;
+    }
+    article {
+        padding: 10px;
+    }
+    main {
+        padding: 10px;
+    }
 }
 
 .plus {
@@ -223,42 +240,5 @@ footer {
     vertical-align: middle;
 }
 .icon:hover {
-    transform: scale(1);
-}
-
-.nav-block {
-    display: flex;
-    align-items: space-between;
-    flex-direction: row;
-    width: auto;
-    height: 200px;
-    background-color: #fff;
-    color: #000;
-    margin: 10px;
-}
-
-.nav-block:hover {
-    background-color: #000;
-}
-
-.nav-block:hover > p {
-    color: #fff;
-}
-
-.nav-block > img {
-    height: auto;
-    margin-right: 20px;
-    border: none;
-    box-shadow: none;
-}
-
-.nav-block > p {
-    flex-grow: 1;
-    font-size: 3em;
-    background-color: rgb(0, 0, 0, 0);
-}
-
-.nav-block > img:hover, .nav-block > p:hover {
-    transition: 0s;
     transform: scale(1);
 }
