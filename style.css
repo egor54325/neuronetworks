@@ -3,26 +3,6 @@
     src: url("fonts/HelveticaNeue/HelveticaNeue-Light.otf")
 }
 
-@font-face {
-    font-family: "HelveticaNeueBold";
-    src: url(fonts/HelveticaNeue/HelveticaNeue-Bold.otf);
-}
-
-@font-face {
-    font-family: "HelveticaNeueThin";
-    src: url(fonts/HelveticaNeue/HelveticaNeue-Thin.otf);
-}
-
-@font-face {
-    font-family: "HelveticaNeueRoman";
-    src: url(fonts/HelveticaNeue/HelveticaNeue-Roman.otf);
-}
-
-@font-face {
-    font-family: "HelveticaNeueMedium";
-    src: url(fonts/HelveticaNeue/HelveticaNeue-Medium.otf);
-}
-
 body {
     background-color: #181a1b;
     font-family: 'HelveticaNeueLight';

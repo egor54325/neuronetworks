@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "HelveticaNeueRoman";
+    src: url(fonts/HelveticaNeue/HelveticaNeue-Roman.otf);
+}
+
 .nav-block {
     display: flex;
     align-items: center;
@@ -34,6 +39,7 @@
     font-size: 2.5em;
     background-color: transparent;
     margin: 0;
+    font-family: 'HelveticaNeueRoman';
 }
 
 .nav-block > img:hover, .nav-block > p:hover {
