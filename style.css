@@ -3,6 +3,11 @@
     src: url("fonts/HelveticaNeue/HelveticaNeue-Light.otf")
 }
 
+@font-face {
+    font-family: "IBMPlexMono-Medium";
+    src: url(fonts/IBMPlexMono/IBMPlexMono-Medium.ttf);
+}
+
 body {
     background-color: #181a1b;
     font-family: 'HelveticaNeueLight';
@@ -221,4 +226,10 @@ footer {
 }
 .icon:hover {
     transform: scale(1);
+}
+
+article > ol > li {
+    background-color: #212327;
+    font-family: "IBMPlexMono-Medium";
+    border-radius: 15px;
 }
